@@ -15,3 +15,6 @@ Newest at the bottom. Each shift: what you did, what is left, what surprised you
 - Plain HTML + module JS in public/, served by a 3-entry static map in server.mjs.
 - First e2e test (Playwright, 420px viewport = phone). Added playwright as devDependency.
 - Text goes in via textContent, never innerHTML with data (titles come from users later).
+- Session 3 REJECTED F3 (attempt 1): reviewer — "stars: 3.5 is accepted (only checked range, not integer)";
+  "rating ids use Math.random(), docs/conventions.md says crypto.randomUUID()";
+  "test file has no case for non-integer stars, so check.sh could not catch it". Shift discarded.
