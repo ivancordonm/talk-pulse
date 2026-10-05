@@ -1,0 +1,17 @@
+{
+  "$comment": "Any model works. Swap the adapter, not the harness.",
+  "roles": {
+    "planner":  { "adapter": "openai-compatible", "baseUrl": "${LLM_BASE_URL}", "model": "${PLANNER_MODEL}" },
+    "builder":  { "adapter": "cli", "cmd": "${BUILDER_CMD}" },
+    "reviewer": { "adapter": "openai-compatible", "baseUrl": "${LLM_BASE_URL}", "model": "${REVIEWER_MODEL}" }
+  },
+  "examples": {
+    "BUILDER_CMD": ["claude -p", "codex exec", "gemini -p", "aider --yes --message", "opencode run"],
+    "LLM_BASE_URL": ["https://api.openai.com/v1", "http://localhost:11434/v1 (Ollama)", "https://openrouter.ai/api/v1"]
+  },
+  "loop": {
+    "maxSessions": 30,
+    "maxAttemptsPerFeature": 3,
+    "reviewerMustDifferFromBuilder": true
+  }
+}

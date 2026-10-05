@@ -1,0 +1,14 @@
+{
+  "name": "talk-pulse",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Rate meetup talks. Built shift by shift with the RELAY harness.",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "check": "./harness/check.sh",
+    "relay:plan": "node harness/relay.mjs plan",
+    "relay:run": "node harness/relay.mjs run"
+  },
+  "engines": { "node": ">=22" }
+}
