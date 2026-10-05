@@ -10,3 +10,8 @@ Newest at the bottom. Each shift: what you did, what is left, what surprised you
 - node:http server with createApp(store) so tests can boot it on port 0.
 - Store is in-memory with 4 seeded talks (persistence is F7, not now).
 - init.sh now has something to boot: /health is the smoke test.
+
+## Session 2 — builder · F2
+- Plain HTML + module JS in public/, served by a 3-entry static map in server.mjs.
+- First e2e test (Playwright, 420px viewport = phone). Added playwright as devDependency.
+- Text goes in via textContent, never innerHTML with data (titles come from users later).

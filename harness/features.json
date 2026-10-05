@@ -16,8 +16,8 @@
       "verify": [
         "Opening / in a browser shows one card per talk with title, speaker and slot"
       ],
-      "passes": false,
-      "attempts": 0
+      "passes": true,
+      "attempts": 1
     },
     {
       "id": "F3",
