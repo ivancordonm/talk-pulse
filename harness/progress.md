@@ -15,3 +15,7 @@ Newest at the bottom. Each shift: what you did, what is left, what surprised you
 - Plain HTML + module JS in public/, served by a 3-entry static map in server.mjs.
 - First e2e test (Playwright, 420px viewport = phone). Added playwright as devDependency.
 - Text goes in via textContent, never innerHTML with data (titles come from users later).
+
+## Session 3 — builder · F3
+- POST /api/talks/:id/ratings with validation in talks.mjs (stars 1–5, comment ≤ 280).
+- DomainError carries code + HTTP status; server.mjs maps it to JSON.
