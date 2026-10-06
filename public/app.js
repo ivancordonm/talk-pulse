@@ -51,7 +51,20 @@ function wireRating(el, t) {
   });
 }
 
+async function renderBoard() {
+  const top = (await (await fetch("/api/leaderboard")).json()).slice(0, 3);
+  $("#top").replaceChildren(...top.map((t) => {
+    const li = document.createElement("li");
+    li.innerHTML = `<span class="who"></span><span class="pts"></span>`;
+    $(".who", li).textContent = t.title;
+    $(".pts", li).textContent = `★ ${t.avg.toFixed(1)} (${t.count})`;
+    return li;
+  }));
+  $("#board .empty").hidden = top.length > 0;
+}
+
 async function render() {
+  renderBoard();
   const talks = await (await fetch("/api/talks")).json();
   for (const t of talks) {
     const card = $(`.talk[data-id="${t.id}"]`);

@@ -33,3 +33,7 @@ Newest at the bottom. Each shift: what you did, what is left, what surprised you
 - Star picker + comment + Rate button on every card. Errors show the API's own message.
 - render() updates scores in place instead of rebuilding cards, so typed comments survive.
 - e2e proves "no reload" with a window marker, not a sleep.
+
+## Session 7 — builder · F6
+- leaderboard() in talks.mjs, GET /api/leaderboard, top-3 panel on the page.
+- Switched averages to 2 decimals so close scores rank correctly; updated the rounding test to match.

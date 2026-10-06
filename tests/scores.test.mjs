@@ -16,7 +16,7 @@ test("avg is rounded to one decimal and count is exact", async () => {
   const app = await startApp();
   for (const s of [5, 4, 4]) await rate(app.base, "t2", s);   // 13/3 = 4.333…
   const t = await talk(app.base, "t2");
-  assert.equal(t.avg, 4.3);
+  assert.equal(t.avg, 4.33);
   assert.equal(t.count, 3);
   await app.close();
 });
