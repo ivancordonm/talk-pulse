@@ -48,8 +48,8 @@
         "Clicking a star and submitting updates that card's average without reload",
         "an invalid submission shows the API error message"
       ],
-      "passes": false,
-      "attempts": 0
+      "passes": true,
+      "attempts": 1
     },
     {
       "id": "F6",
