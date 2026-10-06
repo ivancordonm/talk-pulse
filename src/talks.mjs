@@ -31,3 +31,10 @@ export function addRating(store, talkId, input) {
   }
   return store.addRating({ id: randomUUID(), talkId, stars, comment: comment.trim(), createdAt: new Date().toISOString() });
 }
+
+export function leaderboard(store) {
+  return listTalks(store)
+    .filter((t) => t.count > 0)
+    .sort((a, b) => b.avg - a.avg || b.count - a.count)
+    .map((t, i) => ({ rank: i + 1, ...t }));
+}

@@ -20,3 +20,9 @@ main { max-width: 720px; margin: 0 auto; padding: 12px 20px 40px; display:grid; 
 .send { border:0; border-radius:8px; padding:8px 14px; background:var(--ink); color:#fff; font:inherit; font-weight:600; cursor:pointer; }
 .error { flex-basis:100%; margin:0; color:#b42318; font-size:14px; min-height:0; }
 .error:empty { display:none; }
+#board { background:var(--ink); color:#fff; border-radius:12px; padding:16px 18px; }
+#board h3 { margin:0 0 8px; font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:#fdba74; }
+#top { margin:0; padding-left:22px; display:grid; gap:6px; }
+#top li { display:flex; justify-content:space-between; gap:12px; }
+#top .pts { font-variant-numeric: tabular-nums; color:#fdba74; white-space:nowrap; }
+#board .empty { margin:0; color:#9ca3af; }
