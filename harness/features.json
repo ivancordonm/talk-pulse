@@ -38,8 +38,8 @@
         "GET /api/talks includes avg (1 decimal) and count",
         "a talk with no ratings has avg null and count 0"
       ],
-      "passes": false,
-      "attempts": 0
+      "passes": true,
+      "attempts": 1
     },
     {
       "id": "F5",
