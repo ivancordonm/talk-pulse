@@ -47,5 +47,6 @@ async function route(req, res, store) {
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const port = Number(process.env.PORT ?? 3000);
-  createApp().listen(port, () => log(`talk-pulse listening on :${port}`));
+  const file = process.env.DATA_FILE ?? new URL("../data/db.json", import.meta.url).pathname;
+  createApp(createStore(file)).listen(port, () => log(`talk-pulse listening on :${port}`));
 }
