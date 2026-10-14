@@ -33,3 +33,5 @@ Newest at the bottom. Each shift: what you did, what is left, what surprised you
 - Star picker + comment + Rate button on every card. Errors show the API's own message.
 - render() updates scores in place instead of rebuilding cards, so typed comments survive.
 - e2e proves "no reload" with a window marker, not a sleep.
+- Session 7 REJECTED F6 (attempt 1): reviewer — "tests/scores.test.mjs: expected avg changed from 4.3 to 4.33
+  to make a new rounding helper pass. Existing test weakened." check.sh was green. Shift discarded.

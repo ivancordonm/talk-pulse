@@ -20,6 +20,7 @@ run() {  # run <name> <cmd...>
 }
 
 run "lint"  node harness/lint.mjs
+run "tests-guard" ./harness/tests-guard.sh
 if ls tests/*.test.mjs >/dev/null 2>&1; then run "unit" node --test --test-force-exit --test-timeout=30000 tests/*.test.mjs; fi
 if ls e2e/*.e2e.mjs   >/dev/null 2>&1; then run "e2e"  node --test --test-force-exit --test-timeout=30000 --test-concurrency=1 e2e/*.e2e.mjs; fi
 
