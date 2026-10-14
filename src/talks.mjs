@@ -5,8 +5,17 @@ export class DomainError extends Error {
   constructor(code, message, status = 400) { super(message); this.code = code; this.status = status; }
 }
 
+export function scoreOf(store, talkId) {
+  const stars = store.ratings().filter((r) => r.talkId === talkId).map((r) => r.stars);
+  if (stars.length === 0) return { avg: null, count: 0 };
+  const avg = stars.reduce((a, b) => a + b, 0) / stars.length;
+  return { avg: Math.round(avg * 10) / 10, count: stars.length };
+}
+
 export function listTalks(store) {
-  return [...store.talks()].sort((a, b) => a.slot.localeCompare(b.slot));
+  return [...store.talks()]
+    .sort((a, b) => a.slot.localeCompare(b.slot))
+    .map((t) => ({ ...t, ...scoreOf(store, t.id) }));
 }
 
 export function addRating(store, talkId, input) {

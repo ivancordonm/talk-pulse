@@ -23,3 +23,8 @@ Newest at the bottom. Each shift: what you did, what is left, what surprised you
 - Read the rejection notes first. Tested 0, 6, 3.5, "4", null for stars and 280/281 chars for comments.
 - Validation lives in talks.mjs (DomainError with code + status); server.mjs only maps it to JSON.
 - Ids via crypto.randomUUID(); lint now enforces it.
+
+## Session 5 — builder · F4
+- scoreOf() in talks.mjs; listTalks() now returns avg (1 decimal) and count.
+- Computed on read, no cached totals (fine at meetup scale; revisit if F7 makes it slow).
+- Next shift: F5 is the first UI-with-state feature. Reuse POST error codes for messages.
