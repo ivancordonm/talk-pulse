@@ -1,28 +1,84 @@
 {
   "features": [
-    { "id": "F1", "title": "Health check and talks API",
-      "verify": ["GET /health returns 200 {ok:true}", "GET /api/talks returns the seeded talks ordered by slot"],
-      "passes": false, "attempts": 0 },
-    { "id": "F2", "title": "Talks page lists talks",
-      "verify": ["Opening / in a browser shows one card per talk with title, speaker and slot"],
-      "passes": false, "attempts": 0 },
-    { "id": "F3", "title": "Submit a rating via API",
-      "verify": ["POST /api/talks/:id/ratings with stars 1-5 returns 201", "stars outside 1-5 or non-integer returns 400 with error code", "comment longer than 280 chars returns 400", "unknown talk id returns 404"],
-      "passes": false, "attempts": 0 },
-    { "id": "F4", "title": "Average score and count per talk",
-      "verify": ["GET /api/talks includes avg (1 decimal) and count", "a talk with no ratings has avg null and count 0"],
-      "passes": false, "attempts": 0 },
-    { "id": "F5", "title": "Rate a talk from the page",
-      "verify": ["Clicking a star and submitting updates that card's average without reload", "an invalid submission shows the API error message"],
-      "passes": false, "attempts": 0 },
-    { "id": "F6", "title": "Leaderboard",
-      "verify": ["GET /api/leaderboard ranks rated talks by avg, ties by count", "unrated talks are not on the leaderboard", "the page shows the top 3"],
-      "passes": false, "attempts": 0 },
-    { "id": "F7", "title": "Ratings survive a restart",
-      "verify": ["after restarting the server, previous ratings are still counted"],
-      "passes": false, "attempts": 0 },
-    { "id": "F8", "title": "Leaderboard refreshes on its own",
-      "verify": ["a rating submitted by another client appears on an open page within 5 seconds"],
-      "passes": false, "attempts": 0 }
+    {
+      "id": "F1",
+      "title": "Health check and talks API",
+      "verify": [
+        "GET /health returns 200 {ok:true}",
+        "GET /api/talks returns the seeded talks ordered by slot"
+      ],
+      "passes": true,
+      "attempts": 1
+    },
+    {
+      "id": "F2",
+      "title": "Talks page lists talks",
+      "verify": [
+        "Opening / in a browser shows one card per talk with title, speaker and slot"
+      ],
+      "passes": false,
+      "attempts": 0
+    },
+    {
+      "id": "F3",
+      "title": "Submit a rating via API",
+      "verify": [
+        "POST /api/talks/:id/ratings with stars 1-5 returns 201",
+        "stars outside 1-5 or non-integer returns 400 with error code",
+        "comment longer than 280 chars returns 400",
+        "unknown talk id returns 404"
+      ],
+      "passes": false,
+      "attempts": 0
+    },
+    {
+      "id": "F4",
+      "title": "Average score and count per talk",
+      "verify": [
+        "GET /api/talks includes avg (1 decimal) and count",
+        "a talk with no ratings has avg null and count 0"
+      ],
+      "passes": false,
+      "attempts": 0
+    },
+    {
+      "id": "F5",
+      "title": "Rate a talk from the page",
+      "verify": [
+        "Clicking a star and submitting updates that card's average without reload",
+        "an invalid submission shows the API error message"
+      ],
+      "passes": false,
+      "attempts": 0
+    },
+    {
+      "id": "F6",
+      "title": "Leaderboard",
+      "verify": [
+        "GET /api/leaderboard ranks rated talks by avg, ties by count",
+        "unrated talks are not on the leaderboard",
+        "the page shows the top 3"
+      ],
+      "passes": false,
+      "attempts": 0
+    },
+    {
+      "id": "F7",
+      "title": "Ratings survive a restart",
+      "verify": [
+        "after restarting the server, previous ratings are still counted"
+      ],
+      "passes": false,
+      "attempts": 0
+    },
+    {
+      "id": "F8",
+      "title": "Leaderboard refreshes on its own",
+      "verify": [
+        "a rating submitted by another client appears on an open page within 5 seconds"
+      ],
+      "passes": false,
+      "attempts": 0
+    }
   ]
 }
