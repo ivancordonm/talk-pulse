@@ -59,8 +59,8 @@
         "unrated talks are not on the leaderboard",
         "the page shows the top 3"
       ],
-      "passes": false,
-      "attempts": 1
+      "passes": true,
+      "attempts": 2
     },
     {
       "id": "F7",

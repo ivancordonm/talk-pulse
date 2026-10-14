@@ -1,7 +1,7 @@
 import http from "node:http";
 import { readFile } from "node:fs/promises";
 import { createStore } from "./store.mjs";
-import { listTalks, addRating, DomainError } from "./talks.mjs";
+import { listTalks, addRating, leaderboard, DomainError } from "./talks.mjs";
 import { log } from "./log.mjs";
 
 const STATIC = { "/": ["index.html", "text/html"], "/app.js": ["app.js", "text/javascript"], "/style.css": ["style.css", "text/css"] };
@@ -39,6 +39,7 @@ async function route(req, res, store) {
   if (req.method === "GET" && STATIC[url.pathname]) return serveStatic(res, STATIC[url.pathname]);
   if (req.method === "GET" && url.pathname === "/health") return json(res, 200, { ok: true });
   if (req.method === "GET" && url.pathname === "/api/talks") return json(res, 200, listTalks(store));
+  if (req.method === "GET" && url.pathname === "/api/leaderboard") return json(res, 200, leaderboard(store));
   const rate = url.pathname.match(/^\/api\/talks\/([^/]+)\/ratings$/);
   if (req.method === "POST" && rate) return json(res, 201, addRating(store, rate[1], await readJson(req)));
   json(res, 404, { error: "not_found", message: `No route for ${req.method} ${url.pathname}` });

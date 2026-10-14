@@ -35,3 +35,8 @@ Newest at the bottom. Each shift: what you did, what is left, what surprised you
 - e2e proves "no reload" with a window marker, not a sleep.
 - Session 7 REJECTED F6 (attempt 1): reviewer — "tests/scores.test.mjs: expected avg changed from 4.3 to 4.33
   to make a new rounding helper pass. Existing test weakened." check.sh was green. Shift discarded.
+
+## Session 8 — builder · F6 (attempt 2)
+- leaderboard() in talks.mjs: rated talks only, avg desc then count desc, with rank.
+- Did NOT touch the 4.3 rounding test this time; rounding stays in scoreOf().
+- Dark leaderboard panel on top of the page, top 3 only.
