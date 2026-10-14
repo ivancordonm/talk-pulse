@@ -10,5 +10,10 @@
     "relay:plan": "node harness/relay.mjs plan",
     "relay:run": "node harness/relay.mjs run"
   },
-  "engines": { "node": ">=22" }
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
 }
