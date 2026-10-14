@@ -11,3 +11,12 @@ main { max-width: 720px; margin: 0 auto; padding: 12px 20px 40px; display:grid; 
 .talk h2 { margin:0 0 2px; font-size:18px; }
 .meta { color:var(--muted); font-size:14px; }
 .slot { font-variant-numeric: tabular-nums; font-weight:600; color:var(--accent); margin-right:8px; }
+.score { margin-top:8px; font-weight:600; }
+.rate { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:10px; }
+.stars { display:flex; gap:2px; }
+.star { border:0; background:none; font-size:24px; line-height:1; color:#d1d5db; cursor:pointer; padding:2px; }
+.star.on { color: var(--accent); }
+.rate input { flex:1; min-width:140px; padding:8px 10px; border:1px solid var(--line); border-radius:8px; font:inherit; }
+.send { border:0; border-radius:8px; padding:8px 14px; background:var(--ink); color:#fff; font:inherit; font-weight:600; cursor:pointer; }
+.error { flex-basis:100%; margin:0; color:#b42318; font-size:14px; min-height:0; }
+.error:empty { display:none; }

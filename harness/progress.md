@@ -28,3 +28,8 @@ Newest at the bottom. Each shift: what you did, what is left, what surprised you
 - scoreOf() in talks.mjs; listTalks() now returns avg (1 decimal) and count.
 - Computed on read, no cached totals (fine at meetup scale; revisit if F7 makes it slow).
 - Next shift: F5 is the first UI-with-state feature. Reuse POST error codes for messages.
+
+## Session 6 — builder · F5
+- Star picker + comment + Rate button on every card. Errors show the API's own message.
+- render() updates scores in place instead of rebuilding cards, so typed comments survive.
+- e2e proves "no reload" with a window marker, not a sleep.
