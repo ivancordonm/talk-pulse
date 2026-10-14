@@ -11,5 +11,6 @@ export function createStore() {
   return {
     talks: () => state.talks,
     ratings: () => state.ratings,
+    addRating: (rating) => { state.ratings.push(rating); return rating; },
   };
 }

@@ -28,8 +28,8 @@
         "comment longer than 280 chars returns 400",
         "unknown talk id returns 404"
       ],
-      "passes": false,
-      "attempts": 1
+      "passes": true,
+      "attempts": 2
     },
     {
       "id": "F4",

@@ -18,3 +18,8 @@ Newest at the bottom. Each shift: what you did, what is left, what surprised you
 - Session 3 REJECTED F3 (attempt 1): reviewer — "stars: 3.5 is accepted (only checked range, not integer)";
   "rating ids use Math.random(), docs/conventions.md says crypto.randomUUID()";
   "test file has no case for non-integer stars, so check.sh could not catch it". Shift discarded.
+
+## Session 4 — builder · F3 (attempt 2)
+- Read the rejection notes first. Tested 0, 6, 3.5, "4", null for stars and 280/281 chars for comments.
+- Validation lives in talks.mjs (DomainError with code + status); server.mjs only maps it to JSON.
+- Ids via crypto.randomUUID(); lint now enforces it.
