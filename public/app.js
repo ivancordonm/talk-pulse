@@ -73,4 +73,7 @@ async function render() {
   }
 }
 
+const REFRESH_MS = 3000;  // spec: other people's ratings show up within 5 s
+
 render();
+setInterval(() => { if (!document.hidden) render(); }, REFRESH_MS);

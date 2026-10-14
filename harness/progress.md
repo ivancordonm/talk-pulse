@@ -45,3 +45,8 @@ Newest at the bottom. Each shift: what you did, what is left, what surprised you
 - store.mjs persists to data/db.json (DATA_FILE overrides). Write tmp + rename = atomic.
 - createStore() with no file stays in-memory, so every existing test kept working unchanged.
 - data/ is gitignored. init.sh boots against the real file.
+
+## Session 10 — builder · F8
+- Poll every 3 s while the tab is visible (no websockets: boring wins at this scale).
+- e2e uses a second client (plain fetch) and asserts the page updates in < 5 s.
+- All 8 features pass. Nothing left in features.json. Suggested next brief: QR code per talk.

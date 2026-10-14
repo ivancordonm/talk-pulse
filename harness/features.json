@@ -77,8 +77,8 @@
       "verify": [
         "a rating submitted by another client appears on an open page within 5 seconds"
       ],
-      "passes": false,
-      "attempts": 0
+      "passes": true,
+      "attempts": 1
     }
   ]
 }
