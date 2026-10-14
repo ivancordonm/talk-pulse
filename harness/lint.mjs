@@ -72,6 +72,8 @@ for (const file of allFiles) {
 // 4. Conventions.
 for (const file of srcFiles) {
   const src = read(file);
+  rule(/Math\.random\(/.test(src), file,
+    "Math.random() used", "ids must come from crypto.randomUUID() (docs/conventions.md)");
   rule(file !== "src/log.mjs" && /console\.log/.test(src), file,
     "console.log in src/", "use log() from src/log.mjs (docs/conventions.md)");
 }
