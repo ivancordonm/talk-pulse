@@ -40,3 +40,8 @@ Newest at the bottom. Each shift: what you did, what is left, what surprised you
 - leaderboard() in talks.mjs: rated talks only, avg desc then count desc, with rank.
 - Did NOT touch the 4.3 rounding test this time; rounding stays in scoreOf().
 - Dark leaderboard panel on top of the page, top 3 only.
+
+## Session 9 — builder · F7
+- store.mjs persists to data/db.json (DATA_FILE overrides). Write tmp + rename = atomic.
+- createStore() with no file stays in-memory, so every existing test kept working unchanged.
+- data/ is gitignored. init.sh boots against the real file.

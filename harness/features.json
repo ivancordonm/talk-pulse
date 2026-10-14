@@ -68,8 +68,8 @@
       "verify": [
         "after restarting the server, previous ratings are still counted"
       ],
-      "passes": false,
-      "attempts": 0
+      "passes": true,
+      "attempts": 1
     },
     {
       "id": "F8",
